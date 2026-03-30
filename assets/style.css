@@ -1,0 +1,93 @@
+:root {
+    --primary: #4a90e2;
+    --secondary: #6c757d;
+    --bg: #f4f7f9;
+    --text: #2c3e50;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: var(--text);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+}
+
+h1 { text-align: center; margin-bottom: 30px; }
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.hint { font-size: 0.85rem; color: #888; margin-top: 8px; }
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus { border-color: var(--primary); outline: none; }
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+.btn:active { transform: scale(0.98); }
+.primary { background: var(--primary); color: white; }
+.secondary { background: var(--secondary); color: white; }
+
+.file-name { font-size: 0.9rem; color: #555; font-style: italic; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.box label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    height: 350px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    background: #fafafa;
+    resize: none;
+    box-sizing: border-box;
+}

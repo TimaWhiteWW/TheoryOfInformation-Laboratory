@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LFSR Шифратор - Вариант 17</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>🔐 Потоковый шифр (LFSR 39)</h1>
+
+    <div class="card">
+        <label>Начальное состояние регистра (39 бит):</label>
+        <input type="text" id="seedInput" maxlength="39" value="111111111111111111111111111111111111111" title="Введите 39 символов (0 или 1)">
+        <p class="hint">Введите 39 единиц или нулей. Это ваш секретный ключ.</p>
+    </div>
+
+    <div class="card toolbar">
+        <input type="file" id="filePicker" style="display: none;">
+        <button class="btn secondary" onclick="document.getElementById('filePicker').click()">📂 Выбрать файл</button>
+        <button class="btn primary" id="processBtn">⚡ Зашифровать / Расшифровать</button>
+        <div id="fileNameDisplay" class="file-name">Файл не выбран</div>
+    </div>
+
+    <div class="grid">
+        <div class="box">
+            <label>Ключевая гамма (Bin):</label>
+            <textarea id="keyView" readonly placeholder="Здесь появится ключ..."></textarea>
+        </div>
+        <div class="box">
+            <label>Исходные данные (Bin):</label>
+            <textarea id="sourceView" readonly placeholder="Данные файла до XOR..."></textarea>
+        </div>
+        <div class="box">
+            <label>Результат XOR (Bin):</label>
+            <textarea id="resultView" readonly placeholder="Данные после обработки..."></textarea>
+        </div>
+    </div>
+</div>
+
+<script src="js/lfsr.js"></script>
+<script src="js/ui-handler.js"></script>
+<script>const ui = new UIHandler();</script>
+</body>
+</html>
